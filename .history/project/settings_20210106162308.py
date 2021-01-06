@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '*@h%so9gv3*$uebs42z-1e^0(9ar8=!xug*$!-c4=oiy$%dc5h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['lienusproject.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['lienusproject.herokuapp.com/', '127.0.0.1']
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
