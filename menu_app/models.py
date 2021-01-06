@@ -87,6 +87,7 @@ class OrderItem(models.Model):
 
 
 class Orders (models.Model):
+    desc=models.TextField(null=True)
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     placed = models.BooleanField(default=False)
 
