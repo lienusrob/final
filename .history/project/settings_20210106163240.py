@@ -26,7 +26,6 @@ SECRET_KEY = '*@h%so9gv3*$uebs42z-1e^0(9ar8=!xug*$!-c4=oiy$%dc5h'
 DEBUG = False
 
 ALLOWED_HOSTS = ['lienusproject.herokuapp.com', '127.0.0.1']
-
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATICFILES_DIRS = [
