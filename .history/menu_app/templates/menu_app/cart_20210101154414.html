@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class = "container" >
+        <div class = "container p-3">
+            <h1> Your Shopping Cart </h1>
+            <br>
+            {%for item in cart_items %}
+            <h4> {{item.add_item}}</h4>
+            <p> quantity: {{item.quantity}}</p>
+            <hr> 
+            {%endfor%}
+            <br>
+            <form method="POST" action = "/placeorder/"> 
+                {%csrf_token%}
+                <input type = "submit" class = "btn btn-success" value="Place Order"> 
+            
+            </form>
+            
+        </div>
+
+    </div>
+{% endblock %}

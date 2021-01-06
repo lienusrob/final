@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container p-3">
+    <h1>Recent orders by </h1>
+
+{% for order in orders %}
+<b>order by : {{order.0}}</b><br/>
+{% for items in order.1 %}
+
+{% for item in items %}
+ Ordered item: {{item}} - {{item.quantity}}<br/>
+{% endfor %}
+{% endfor %}<br/>
+
+<i>Extras: {{order.3}}</i> 
+<hr/>
+{% endfor %}
+
+</table>
+</div>
+{% endblock %}

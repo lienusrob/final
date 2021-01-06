@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<div class="container p-3">
+<h1>Cart</h1><br/>
+{% if cart_items %}
+{% for food in cart_items %}
+   <h4>{{food.add_item}}</h4>
+   <p>
+   Quantity : {{food.quantity}}
+   </p>
+   <p>
+      Quantity : {{food.quantity}}
+   </p>
+   
+  <hr/>
+{% endfor %}
+<br/>
+<h4>Add extras</h4>
+<form action="/place_order/" method="POST">
+{% csrf_token %}
+{% for extra in extras %}
+   <input type="checkbox" name="{{extra.pk}}" value /> {{extra.name}} - Rs. {{extra.price}} <br/>
+   <input type="button" class="btn btn-success" value="E" />
+   {% endfor %}
+<input type="submit" class="btn btn-success" value="Place Order" />
+</form>
+{% else %}
+<p>Cart is empty</p>
+{% endif %}
+</div>
+</div>
+
+{% endblock %}

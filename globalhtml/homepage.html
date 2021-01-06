@@ -1,0 +1,11 @@
+
+{%extends 'base.html'%}
+{%load static%}
+{% block content%}
+
+<h1 class = "home"> homepage </h1>
+{%csrf_token%}
+<from class = "site-form" method="post"> {{form}}</from>
+<input type="submit" value="create">
+{{Contact}}
+{% endblock %}

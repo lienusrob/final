@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<!-- {% load static %} -->
+{% block content %}
+
+{%for food in item %}
+{{food.menu_category}}
+{%endfor%}
+
+<from >
+    {%csrf_token%}
+    {{form}}
+    
+
+</from>
+{{food}}
+
+{% endblock %}
