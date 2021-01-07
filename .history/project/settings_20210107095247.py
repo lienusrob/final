@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['lienusproject.herokuapp.com', '127.0.0.1']
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 # Application definition
@@ -133,7 +133,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+
 
 
 LOGIN_REDIRECT_URL = '/'
