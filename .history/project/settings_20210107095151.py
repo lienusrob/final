@@ -34,7 +34,7 @@ STATICFILES_DIRS = [
 ]
 STATIC_URL = '/static/'
 # Application definition
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 INSTALLED_APPS = [
     
     'django.contrib.admin',
